@@ -1,0 +1,1291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="ProCore Services — Premium epoxy flooring, HVAC, plumbing, smart door lock installation, and formwork rental in Ottawa, Canada and Djibouti, Africa."/>
+  <title>ProCore Services | Epoxy · HVAC · Plumbing · Smart Locks · Formwork</title>
+
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+
+<!-- ════════════════════════════════════
+     LIGHTBOX
+════════════════════════════════════ -->
+<div id="lightbox" role="dialog" aria-modal="true">
+  <button id="lb-close" aria-label="Close lightbox">✕ Close</button>
+  <img id="lb-img" src="" alt="Gallery image"/>
+  <div id="lb-caption"></div>
+</div>
+
+<!-- BACK TO TOP -->
+<button id="back-to-top" aria-label="Back to top">▲</button>
+
+<!-- ════════════════════════════════════
+     NAVIGATION
+════════════════════════════════════ -->
+<nav id="nav" role="navigation" aria-label="Main navigation">
+  <!-- Logo -->
+  <a href="#home" class="nav-logo">Pro<span>Core</span></a>
+
+  <!-- Links -->
+  <ul class="nav-links" id="nav-links">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About</a></li>
+
+    <!-- Services dropdown -->
+    <li>
+      <a href="#services" class="has-drop">Services</a>
+      <div class="nav-dropdown">
+        <a href="#epoxy">     <span class="dico">🏗️</span> Epoxy Flooring</a>
+        <a href="#hvac">      <span class="dico">❄️</span>  HVAC Systems</a>
+        <a href="#plumbing">  <span class="dico">🔧</span> Plumbing</a>
+        <a href="#smartlock"> <span class="dico">🔒</span> Smart Door Locks</a>
+        <a href="#formwork">  <span class="dico">🏛️</span> Formwork Rental</a>
+      </div>
+    </li>
+
+    <li><a href="#gallery">Gallery</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="tel:25377834309" class="nav-phone">📞 253 77 834309</a></li>
+    <li><a href="#contact" class="nav-cta">Free Quote</a></li>
+  </ul>
+
+  <!-- Hamburger (mobile) -->
+  <button class="nav-burger" id="nav-burger" aria-label="Toggle menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- ════════════════════════════════════
+     HERO
+════════════════════════════════════ -->
+<section id="home" aria-label="Hero">
+  <!-- Slideshow backgrounds — only service-relevant images -->
+  <div class="hero-slides">
+    <!-- Slide 1: Epoxy garage floor -->
+    <div class="hero-slide active">
+      <img
+        src="https://www.armorcoatingco.com/wp-content/uploads/2023/06/how-to-maintain-a-shiny-epoxy-garage-floor-1.jpg"
+        alt="Shiny epoxy coated garage floor"
+        loading="eager"
+        onerror="this.src='https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1600&q=80'"
+      />
+    </div>
+    <!-- Slide 2: HVAC installation -->
+    <div class="hero-slide">
+      <img
+        src="https://www.rosagray.com/wp-content/uploads/2024/06/air-conditioning-installation-course-at-rosa-gray.jpg"
+        alt="HVAC air conditioning installation"
+        loading="lazy"
+        onerror="this.src='https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=1600&q=80'"
+      />
+    </div>
+    <!-- Slide 3: Plumbing copper pipes -->
+    <div class="hero-slide">
+      <img
+        src="https://mpeplumbingheatinggas.co.uk/wp-content/uploads/2019/08/copper-pipework-installation.jpg"
+        alt="Professional plumbing copper pipe installation"
+        loading="lazy"
+        onerror="this.src='https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?w=1600&q=80'"
+      />
+    </div>
+    <!-- Slide 4: Smart door lock -->
+    <div class="hero-slide">
+      <img
+        src="https://m.media-amazon.com/images/I/61QfH7CQFNL._AC_SL1500_.jpg"
+        alt="Electronic smart keypad door lock installed"
+        loading="lazy"
+        onerror="this.src='https://images.unsplash.com/photo-1558002038-1055907df827?w=1600&q=80'"
+      />
+    </div>
+  </div>
+  <div class="hero-overlay"></div>
+  <div class="hero-accent-line"></div>
+
+  <!-- Slide dots -->
+  <div class="hero-dots" role="tablist" aria-label="Hero slides">
+    <div class="hero-dot active" data-i="0" role="tab" aria-label="Slide 1"></div>
+    <div class="hero-dot"        data-i="1" role="tab" aria-label="Slide 2"></div>
+    <div class="hero-dot"        data-i="2" role="tab" aria-label="Slide 3"></div>
+    <div class="hero-dot"        data-i="3" role="tab" aria-label="Slide 4"></div>
+  </div>
+
+  <!-- Content -->
+  <div class="hero-content">
+    <div class="hero-badge">Ottawa 🇨🇦 &amp; Djibouti 🇩🇯 · Licensed &amp; Insured · Since 2005</div>
+    <h1>
+      <span class="line-muted">Epoxy · HVAC · Plumbing · Smart Locks · Formwork</span>
+      Built to <span class="accent">Last.</span>
+    </h1>
+    <p class="hero-sub">
+      Five specialist services. Two countries. One uncompromising standard of quality.
+      From showroom epoxy floors to smart home security — ProCore delivers.
+    </p>
+    <div class="hero-btns">
+      <a href="#contact" class="btn btn-primary">Get a Free Quote ›</a>
+      <a href="#services" class="btn btn-outline">Our Services</a>
+    </div>
+    <div class="hero-stats">
+      <div>
+        <div class="stat-number">20+</div>
+        <div class="stat-label">Years Experience</div>
+      </div>
+      <div>
+        <div class="stat-number">3,800+</div>
+        <div class="stat-label">Projects Completed</div>
+      </div>
+      <div>
+        <div class="stat-number">5</div>
+        <div class="stat-label">Specialist Services</div>
+      </div>
+      <div>
+        <div class="stat-number">5★</div>
+        <div class="stat-label">Rated</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TICKER -->
+<div class="ticker" aria-hidden="true">
+  <div class="ticker-track">
+    <span>Epoxy Flooring</span><span>HVAC Installation</span><span>Plumbing</span>
+    <span>Smart Door Locks</span><span>Formwork Rental</span><span>Metallic Epoxy</span>
+    <span>AC Systems</span><span>Keyless Entry</span><span>Ottawa Canada</span>
+    <span>Djibouti Africa</span><span>Free Estimates</span><span>3-Year Warranty</span>
+    <!-- Duplicate for seamless loop -->
+    <span>Epoxy Flooring</span><span>HVAC Installation</span><span>Plumbing</span>
+    <span>Smart Door Locks</span><span>Formwork Rental</span><span>Metallic Epoxy</span>
+    <span>AC Systems</span><span>Keyless Entry</span><span>Ottawa Canada</span>
+    <span>Djibouti Africa</span><span>Free Estimates</span><span>3-Year Warranty</span>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════
+     SERVICES OVERVIEW
+════════════════════════════════════ -->
+<section id="services" class="section">
+  <div class="rv" style="text-align:center; margin-bottom:.5rem;">
+    <span class="eyebrow" style="justify-content:center;">What We Do</span>
+    <h2>Five Services. <span class="accent">One Trusted Team.</span></h2>
+    <p class="lead" style="max-width:560px; margin:0 auto;">
+      Every service delivered by our licensed in-house crew —
+      no subcontractors, no shortcuts, no surprises.
+    </p>
+  </div>
+
+  <div class="services-overview">
+
+    <!-- Epoxy -->
+    <a href="#epoxy" class="svc-card rv">
+      <div class="svc-card-img">
+        <img
+          src="https://wisecoatings.com/wp-content/uploads/2021/04/garage-floor-epoxy-coating.jpg"
+          alt="Epoxy garage floor coating"
+          loading="lazy"
+          onerror="this.src='https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80'"
+        />
+      </div>
+      <div class="svc-card-body">
+        <div class="svc-icon">🏗️</div>
+        <h3>Epoxy Flooring</h3>
+        <p>Garage, basement, metallic, commercial — flawless coatings with a 3-year warranty.</p>
+        <span class="svc-link">Explore ›</span>
+      </div>
+    </a>
+
+    <!-- HVAC -->
+    <a href="#hvac" class="svc-card rv d1">
+      <div class="svc-card-img">
+        <img
+          src="https://www.rosagray.com/wp-content/uploads/2024/06/air-conditioning-installation-course-at-rosa-gray.jpg"
+          alt="HVAC system installation"
+          loading="lazy"
+          onerror="this.src='https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=600&q=80'"
+        />
+      </div>
+      <div class="svc-card-body">
+        <div class="svc-icon">❄️</div>
+        <h3>HVAC Systems</h3>
+        <p>AC, furnace, ductwork — NATE-certified installation and emergency repair.</p>
+        <span class="svc-link">Explore ›</span>
+      </div>
+    </a>
+
+    <!-- Plumbing -->
+    <a href="#plumbing" class="svc-card rv d2">
+      <div class="svc-card-img">
+        <img
+          src="https://mpeplumbingheatinggas.co.uk/wp-content/uploads/2019/08/copper-pipework-installation.jpg"
+          alt="Professional plumbing installation"
+          loading="lazy"
+          onerror="this.src='https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?w=600&q=80'"
+        />
+      </div>
+      <div class="svc-card-body">
+        <div class="svc-icon">🔧</div>
+        <h3>Plumbing</h3>
+        <p>Emergency repairs, water heaters, drain cleaning — 24/7 licensed plumbers.</p>
+        <span class="svc-link">Explore ›</span>
+      </div>
+    </a>
+
+    <!-- Smart Lock -->
+    <a href="#smartlock" class="svc-card rv d3">
+      <div class="svc-card-img">
+        <img
+          src="https://m.media-amazon.com/images/I/61QfH7CQFNL._AC_SL1500_.jpg"
+          alt="Smart electronic door lock installed"
+          loading="lazy"
+          onerror="this.src='https://images.unsplash.com/photo-1558002038-1055907df827?w=600&q=80'"
+        />
+      </div>
+      <div class="svc-card-body">
+        <div class="svc-icon">🔒</div>
+        <h3>Smart Door Locks</h3>
+        <p>Keypad, fingerprint, Wi-Fi — professionally installed, all major brands.</p>
+        <span class="svc-link">Explore ›</span>
+      </div>
+    </a>
+
+    <!-- Formwork -->
+    <a href="#formwork" class="svc-card rv d4">
+      <div class="svc-card-img">
+        <img
+          src="https://scaxa.com/wp-content/uploads/2023/08/types-of-scaffolding-1.jpg"
+          alt="Concrete formwork and scaffolding system"
+          loading="lazy"
+          onerror="this.src='https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&q=80'"
+        />
+      </div>
+      <div class="svc-card-body">
+        <div class="svc-icon">🏛️</div>
+        <h3>Formwork Rental</h3>
+        <p>Wall, slab, column &amp; beam systems — professional-grade equipment for any project.</p>
+        <span class="svc-link">Explore ›</span>
+      </div>
+    </a>
+
+  </div>
+</section>
+
+<!-- ════════════════════════════════════
+     EPOXY FLOORING SECTION
+════════════════════════════════════ -->
+<section id="epoxy" class="service-section">
+  <div class="service-layout">
+
+    <!-- Text -->
+    <div class="service-text rv">
+      <span class="eyebrow">Epoxy Flooring</span>
+      <h2>Floors That <span class="accent">Impress.</span></h2>
+      <p>
+        From raw concrete to a showroom-quality surface in a single day.
+        Our industrial-grade epoxy systems are engineered for both beauty and extreme durability —
+        perfect for residential garages, commercial spaces, and everything in between.
+      </p>
+      <p>All installations include surface preparation, primer, colour/flake coat, and a UV-stable topcoat — backed by our exclusive 3-year warranty.</p>
+
+      <ul class="bullet-list">
+        <li>Garage floor flake &amp; chip coatings</li>
+        <li>Metallic &amp; marble swirl epoxy (decorative interiors)</li>
+        <li>Basement &amp; utility floor coatings</li>
+        <li>Commercial &amp; industrial floor systems</li>
+        <li>Exterior patio &amp; deck coatings</li>
+        <li>Diamond grinding, crack repair &amp; moisture treatment</li>
+      </ul>
+
+      <div class="process-steps">
+        <div class="pstep rv"><div class="pstep-num">01</div><div><h4>Surface Preparation</h4><p>Diamond grinding, crack injection, moisture testing — the critical foundation of a lasting coat.</p></div></div>
+        <div class="pstep rv d1"><div class="pstep-num">02</div><div><h4>Primer &amp; Base Coat</h4><p>Industrial-grade epoxy primer bonded to ensure maximum adhesion and moisture lock-out.</p></div></div>
+        <div class="pstep rv d2"><div class="pstep-num">03</div><div><h4>Colour / Flake / Metallic</h4><p>Broadcast flake, metallic swirl, or solid colour — custom to your vision and use case.</p></div></div>
+        <div class="pstep rv d3"><div class="pstep-num">04</div><div><h4>Polyurea Topcoat</h4><p>UV-stable, scratch- and chemical-resistant topcoat. Ready to drive on in under 24 hours.</p></div></div>
+      </div>
+
+      <div class="service-badges" style="margin-top:1.6rem;">
+        <span class="sbadge">3-Year Warranty</span>
+        <span class="sbadge">Residential</span>
+        <span class="sbadge">Commercial</span>
+        <span class="sbadge">Industrial</span>
+        <span class="sbadge">Same-Day Quotes</span>
+      </div>
+      <div style="margin-top:2rem;">
+        <a href="#contact" class="btn btn-primary">Get Epoxy Quote ›</a>
+      </div>
+    </div>
+
+    <!-- Photos -->
+    <div class="rv d2">
+      <div class="service-photos grid-2x2">
+        <!-- Main large photo -->
+        <div class="sph h280"
+          data-lb="https://www.armorcoatingco.com/wp-content/uploads/2023/06/how-to-maintain-a-shiny-epoxy-garage-floor-1.jpg"
+          data-caption="Epoxy Garage Floor · Mirror-Gloss Finish">
+          <img
+            src="https://www.armorcoatingco.com/wp-content/uploads/2023/06/how-to-maintain-a-shiny-epoxy-garage-floor-1.jpg"
+            alt="Mirror-gloss epoxy garage floor"
+            loading="lazy"
+            onerror="this.src='https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=700&q=80'"
+          />
+          <div class="sph-caption">Garage · Mirror-Gloss Finish</div>
+        </div>
+        <!-- Second -->
+        <div class="sph h280"
+          data-lb="https://i.pinimg.com/originals/2e/91/3a/2e913a8a5e22f6d6be29e0e95ba2e8f5.jpg"
+          data-caption="Metallic Epoxy · Swirl Effect Interior">
+          <img
+            src="https://i.pinimg.com/originals/2e/91/3a/2e913a8a5e22f6d6be29e0e95ba2e8f5.jpg"
+            alt="Metallic epoxy marble swirl floor"
+            loading="lazy"
+            onerror="this.src='https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=700&q=80'"
+          />
+          <div class="sph-caption">Metallic · Marble Swirl</div>
+        </div>
+        <!-- Third -->
+        <div class="sph h240"
+          data-lb="https://wisecoatings.com/wp-content/uploads/2021/04/garage-floor-epoxy-coating.jpg"
+          data-caption="Epoxy · Full Flake Chip System">
+          <img
+            src="https://wisecoatings.com/wp-content/uploads/2021/04/garage-floor-epoxy-coating.jpg"
+            alt="Full flake epoxy floor system"
+            loading="lazy"
+            onerror="this.src='https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=700&q=80'"
+          />
+          <div class="sph-caption">Flake Chip System</div>
+        </div>
+        <!-- Fourth: before/after -->
+        <div class="sph h240"
+          data-lb="https://garagefloorcoating.com/wp-content/uploads/2021/09/Epoxy-Flooring-Before-After.jpg"
+          data-caption="Epoxy Flooring · Before &amp; After Transformation">
+          <img
+            src="https://garagefloorcoating.com/wp-content/uploads/2021/09/Epoxy-Flooring-Before-After.jpg"
+            alt="Epoxy floor before and after"
+            loading="lazy"
+            onerror="this.src='https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=700&q=80'"
+          />
+          <div class="sph-caption">Before &amp; After</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ════════════════════════════════════
+     HVAC SECTION
+════════════════════════════════════ -->
+<section id="hvac" class="service-section">
+  <div class="service-layout reverse">
+
+    <!-- Photos (left on desktop via reverse) -->
+    <div class="rv">
+      <div class="service-photos grid-main" style="grid-template-columns:1fr 1fr; gap:3px;">
+        <div class="sph h280 tall"
+          data-lb="https://www.rosagray.com/wp-content/uploads/2024/06/air-conditioning-installation-course-at-rosa-gray.jpg"
+          data-caption="HVAC · AC System Installation">
+          <img
+            src="https://www.rosagray.com/wp-content/uploads/2024/06/air-conditioning-installation-course-at-rosa-gray.jpg"
+            alt="HVAC technician installing air conditioning"
+            loading="lazy"
+            onerror="this.src='https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=700&q=80'"
+          />
+          <div class="sph-caption">AC System · Installation</div>
+        </div>
+        <div style="display:grid; grid-template-rows:1fr 1fr; gap:3px;">
+          <div class="sph"
+            data-lb="https://apolloair.com/wp-content/uploads/2021/06/air-conditioner-installer.jpg"
+            data-caption="HVAC · Outdoor Condenser Unit">
+            <img
+              src="https://apolloair.com/wp-content/uploads/2021/06/air-conditioner-installer.jpg"
+              alt="Outdoor HVAC condenser unit"
+              loading="lazy"
+              onerror="this.src='https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=500&q=80'"
+            />
+            <div class="sph-caption">Outdoor Condenser</div>
+          </div>
+          <div class="sph"
+            data-lb="https://www.modernize.com/wp-content/uploads/2022/02/furnace-installation.jpg"
+            data-caption="HVAC · Furnace Installation">
+            <img
+              src="https://www.modernize.com/wp-content/uploads/2022/02/furnace-installation.jpg"
+              alt="Furnace heating system installation"
+              loading="lazy"
+              onerror="this.src='https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=500&q=80'"
+            />
+            <div class="sph-caption">Furnace &amp; Heating</div>
+          </div>
+        </div>
+      </div>
+      <div class="stat-ribbon">
+        <div class="stat-cell"><div class="sc-num">24/7</div><div class="sc-lbl">Emergency</div></div>
+        <div class="stat-cell"><div class="sc-num">All</div><div class="sc-lbl">Brands</div></div>
+        <div class="stat-cell"><div class="sc-num">1yr</div><div class="sc-lbl">Warranty</div></div>
+        <div class="stat-cell"><div class="sc-num">Same Day</div><div class="sc-lbl">Most Repairs</div></div>
+      </div>
+    </div>
+
+    <!-- Text -->
+    <div class="service-text rv d2">
+      <span class="eyebrow">HVAC Systems</span>
+      <h2>Climate <span class="accent">Perfected.</span></h2>
+      <p>
+        NATE-certified technicians, parts on every truck, all major brands serviced.
+        From a new AC system to emergency furnace repair — we're there fast and we fix it right.
+      </p>
+      <ul class="bullet-list">
+        <li>Central air conditioning installation &amp; repair</li>
+        <li>Ductless mini-split system installation</li>
+        <li>Gas &amp; electric furnace replacement</li>
+        <li>Ductwork design, installation &amp; sealing</li>
+        <li>Annual maintenance &amp; seasonal tune-up plans</li>
+        <li>Indoor air quality systems &amp; filtration</li>
+        <li>Heat pump installation &amp; servicing</li>
+      </ul>
+      <div class="service-badges">
+        <span class="sbadge">NATE Certified</span>
+        <span class="sbadge">24/7 Emergency</span>
+        <span class="sbadge">All Brands</span>
+        <span class="sbadge">1-Year Labour</span>
+      </div>
+      <div style="margin-top:2rem; display:flex; gap:.8rem; flex-wrap:wrap;">
+        <a href="#contact" class="btn btn-primary">Book HVAC Service ›</a>
+        <a href="tel:25377834309" class="btn btn-outline">📞 253 77 834309</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ════════════════════════════════════
+     PLUMBING SECTION
+════════════════════════════════════ -->
+<section id="plumbing" class="service-section">
+  <div class="service-layout">
+
+    <!-- Text -->
+    <div class="service-text rv">
+      <span class="eyebrow">Plumbing</span>
+      <h2>Leaks Fixed. <span class="accent">Fast.</span></h2>
+      <p>
+        Licensed master plumbers available around the clock.
+        Whether it's a burst pipe at 3am or a full bathroom rough-in on a commercial build —
+        ProCore diagnoses fast and fixes it right the first time.
+      </p>
+      <ul class="bullet-list">
+        <li>Emergency burst pipe repair (24/7 response)</li>
+        <li>Tankless &amp; traditional water heater installation</li>
+        <li>Copper, PEX, and CPVC pipe installation &amp; repiping</li>
+        <li>Hydro-jet drain cleaning &amp; sewer line clearing</li>
+        <li>Bathroom &amp; kitchen fixture installation</li>
+        <li>New construction rough-in plumbing</li>
+        <li>Sump pump installation &amp; replacement</li>
+      </ul>
+      <div class="service-badges">
+        <span class="sbadge">Master Plumber</span>
+        <span class="sbadge">24/7 Emergency</span>
+        <span class="sbadge">Licensed</span>
+        <span class="sbadge">Insured</span>
+      </div>
+      <div style="margin-top:2rem;">
+        <a href="#contact" class="btn btn-primary">Get Plumbing Quote ›</a>
+      </div>
+    </div>
+
+    <!-- Photos -->
+    <div class="rv d2">
+      <div class="service-photos" style="display:grid; grid-template-columns:1fr 1fr; gap:3px;">
+        <div class="sph h280"
+          data-lb="https://mpeplumbingheatinggas.co.uk/wp-content/uploads/2019/08/copper-pipework-installation.jpg"
+          data-caption="Plumbing · Copper Pipe Installation">
+          <img
+            src="https://mpeplumbingheatinggas.co.uk/wp-content/uploads/2019/08/copper-pipework-installation.jpg"
+            alt="Copper plumbing pipe installation"
+            loading="lazy"
+            onerror="this.src='https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?w=700&q=80'"
+          />
+          <div class="sph-caption">Copper Pipe · Installation</div>
+        </div>
+        <div class="sph h280"
+          data-lb="https://instantplumbing.ca/wp-content/uploads/2022/05/gas-tankless-water-heater-installation.jpg"
+          data-caption="Plumbing · Tankless Water Heater">
+          <img
+            src="https://instantplumbing.ca/wp-content/uploads/2022/05/gas-tankless-water-heater-installation.jpg"
+            alt="Tankless water heater installation"
+            loading="lazy"
+            onerror="this.src='https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?w=700&q=80'"
+          />
+          <div class="sph-caption">Tankless Water Heater</div>
+        </div>
+        <div class="sph h240"
+          data-lb="https://mpeplumbingheatinggas.co.uk/wp-content/uploads/2019/08/copper-pipework-installation.jpg"
+          data-caption="Plumbing · New Construction Rough-In">
+          <img
+            src="https://mpeplumbingheatinggas.co.uk/wp-content/uploads/2019/08/copper-pipework-installation.jpg"
+            alt="New construction plumbing rough-in"
+            loading="lazy"
+            onerror="this.src='https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?w=700&q=80'"
+          />
+          <div class="sph-caption">New Construction · Rough-In</div>
+        </div>
+        <div class="sph h240"
+          data-lb="https://instantplumbing.ca/wp-content/uploads/2022/05/gas-tankless-water-heater-installation.jpg"
+          data-caption="Plumbing · Complete System">
+          <img
+            src="https://instantplumbing.ca/wp-content/uploads/2022/05/gas-tankless-water-heater-installation.jpg"
+            alt="Complete plumbing system"
+            loading="lazy"
+            onerror="this.src='https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?w=700&q=80'"
+          />
+          <div class="sph-caption">Complete System Install</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ════════════════════════════════════
+     SMART DOOR LOCK SECTION
+════════════════════════════════════ -->
+<section id="smartlock" class="service-section">
+  <div class="service-layout reverse">
+
+    <!-- Photos (left via reverse) -->
+    <div class="rv">
+      <!-- Top photo strip -->
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:3px; margin-bottom:3px;">
+        <div class="sph h280"
+          data-lb="https://m.media-amazon.com/images/I/61QfH7CQFNL._AC_SL1500_.jpg"
+          data-caption="Electronic Keypad Deadbolt · Installed">
+          <img
+            src="https://m.media-amazon.com/images/I/61QfH7CQFNL._AC_SL1500_.jpg"
+            alt="Electronic keypad deadbolt lock installed on door"
+            loading="lazy"
+            onerror="this.src='https://images.unsplash.com/photo-1558002038-1055907df827?w=700&q=80'"
+          />
+          <div class="sph-caption">Keypad Deadbolt · Installed</div>
+        </div>
+        <div class="sph h280"
+          data-lb="https://m.media-amazon.com/images/I/71a8HA05eQL._AC_SL1500_.jpg"
+          data-caption="Fingerprint Smart Lock · Installed">
+          <img
+            src="https://m.media-amazon.com/images/I/71a8HA05eQL._AC_SL1500_.jpg"
+            alt="Fingerprint biometric smart door lock"
+            loading="lazy"
+            onerror="this.src='https://images.unsplash.com/photo-1558002038-1055907df827?w=700&q=80'"
+          />
+          <div class="sph-caption">Fingerprint · Biometric</div>
+        </div>
+      </div>
+      <!-- Bottom strip -->
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:3px;">
+        <div class="sph h220"
+          data-lb="https://robots.net/wp-content/uploads/2023/07/how-to-install-august-smart-lock-1689319965.jpg"
+          data-caption="August Smart Lock · Professional Installation">
+          <img
+            src="https://robots.net/wp-content/uploads/2023/07/how-to-install-august-smart-lock-1689319965.jpg"
+            alt="August Wi-Fi smart lock professional installation"
+            loading="lazy"
+            onerror="this.src='https://images.unsplash.com/photo-1558002038-1055907df827?w=700&q=80'"
+          />
+          <div class="sph-caption">Professional Installation</div>
+        </div>
+        <div class="sph h220"
+          data-lb="https://m.media-amazon.com/images/I/81Wv1pJfKLL._AC_SL1500_.jpg"
+          data-caption="Wi-Fi Smart Lock · App Controlled">
+          <img
+            src="https://m.media-amazon.com/images/I/81Wv1pJfKLL._AC_SL1500_.jpg"
+            alt="Wi-Fi app controlled smart lock"
+            loading="lazy"
+            onerror="this.src='https://images.unsplash.com/photo-1558002038-1055907df827?w=700&q=80'"
+          />
+          <div class="sph-caption">Wi-Fi · App Controlled</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Text -->
+    <div class="service-text rv d2">
+      <span class="eyebrow">Smart Door Locks</span>
+      <h2>Keys Are <span class="accent">Optional.</span></h2>
+      <p>
+        Upgrade your home or business with the latest smart lock technology.
+        We supply, install, configure, and test all major brands —
+        leaving you with a fully working system and the app ready to go.
+      </p>
+
+      <!-- Interactive tabs -->
+      <div style="display:flex; gap:.5rem; flex-wrap:wrap; margin:1.5rem 0 1.2rem;">
+        <button class="btn btn-sm lock-tab active" data-panel="lp-keypad">Keypad</button>
+        <button class="btn btn-sm lock-tab" data-panel="lp-finger">Fingerprint</button>
+        <button class="btn btn-sm lock-tab" data-panel="lp-wifi">Wi-Fi App</button>
+        <button class="btn btn-sm lock-tab" data-panel="lp-deadbolt">Deadbolt Retrofit</button>
+      </div>
+      <!-- Tab panels -->
+      <div style="min-height:160px;">
+        <div class="lock-panel active" id="lp-keypad">
+          <h4>Keypad Door Locks</h4>
+          <ul class="bullet-list" style="margin-top:.6rem;">
+            <li>Multiple unique PIN codes for family members</li>
+            <li>Temporary guest codes that expire automatically</li>
+            <li>Auto-lock after a configurable time period</li>
+            <li>Low-battery alerts and battery backup included</li>
+          </ul>
+        </div>
+        <div class="lock-panel" id="lp-finger" style="display:none;">
+          <h4>Fingerprint Biometric Locks</h4>
+          <ul class="bullet-list" style="margin-top:.6rem;">
+            <li>Stores up to 100 fingerprint profiles</li>
+            <li>Unlocks in under 0.5 seconds in all weather</li>
+            <li>Backup PIN and physical key options</li>
+            <li>Access log — see who entered and when</li>
+          </ul>
+        </div>
+        <div class="lock-panel" id="lp-wifi" style="display:none;">
+          <h4>Wi-Fi &amp; App-Controlled Locks</h4>
+          <ul class="bullet-list" style="margin-top:.6rem;">
+            <li>Remote lock / unlock from anywhere in the world</li>
+            <li>Real-time push notifications on every entry</li>
+            <li>Works with Alexa, Google Home, Apple HomeKit</li>
+            <li>Full activity log in the app</li>
+          </ul>
+        </div>
+        <div class="lock-panel" id="lp-deadbolt" style="display:none;">
+          <h4>Smart Deadbolt Retrofit</h4>
+          <ul class="bullet-list" style="margin-top:.6rem;">
+            <li>Fits most standard doors — no exterior hardware change</li>
+            <li>Installs in under 30 minutes</li>
+            <li>Compatible with August, Yale, Schlage &amp; more</li>
+            <li>Full app setup and configuration done on site</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="service-badges">
+        <span class="sbadge">August</span><span class="sbadge">Yale</span>
+        <span class="sbadge">Schlage</span><span class="sbadge">Kwikset</span>
+        <span class="sbadge">Ultraloq</span><span class="sbadge">Eufy</span>
+        <span class="sbadge">Samsung</span>
+      </div>
+      <div style="margin-top:2rem;">
+        <a href="#contact" class="btn btn-primary">Book Install ›</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ════════════════════════════════════
+     FORMWORK RENTAL SECTION
+════════════════════════════════════ -->
+<section id="formwork">
+  <div class="section">
+    <div class="rv" style="margin-bottom:.5rem;">
+      <span class="eyebrow">Formwork Rental</span>
+      <h2>Build Bigger. <span class="accent">Rent Smarter.</span></h2>
+      <p class="lead">
+        Professional-grade formwork systems available for short-term and long-term rental.
+        Ideal for contractors, developers, and construction teams of any size.
+      </p>
+    </div>
+
+    <!-- Formwork photo grid -->
+    <div class="fw-photo-grid rv">
+      <div class="sph h320 tall"
+        data-lb="https://scaxa.com/wp-content/uploads/2023/08/types-of-scaffolding-1.jpg"
+        data-caption="Formwork · Scaffolding &amp; Shoring System">
+        <img
+          src="https://scaxa.com/wp-content/uploads/2023/08/types-of-scaffolding-1.jpg"
+          alt="Construction scaffolding formwork system"
+          loading="lazy"
+          onerror="this.src='https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=700&q=80'"
+        />
+        <div class="sph-caption">Scaffolding · Shoring System</div>
+      </div>
+      <div class="sph h240"
+        data-lb="https://formworkdirect.com/wp-content/uploads/2021/03/GASS-Shoring-System-1.jpg"
+        data-caption="Formwork · Slab Shoring Props">
+        <img
+          src="https://formworkdirect.com/wp-content/uploads/2021/03/GASS-Shoring-System-1.jpg"
+          alt="Concrete slab shoring formwork system"
+          loading="lazy"
+          onerror="this.src='https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=700&q=80'"
+        />
+        <div class="sph-caption">Slab Shoring System</div>
+      </div>
+      <div class="sph h240"
+        data-lb="https://teconformwork.com/wp-content/uploads/wall-formwork.jpg"
+        data-caption="Formwork · Wall Panel System">
+        <img
+          src="https://teconformwork.com/wp-content/uploads/wall-formwork.jpg"
+          alt="Concrete wall formwork panel system"
+          loading="lazy"
+          onerror="this.src='https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=700&q=80'"
+        />
+        <div class="sph-caption">Wall Formwork · Panels</div>
+      </div>
+    </div>
+
+    <!-- Rental cards -->
+    <div class="fw-rental-cards">
+
+      <div class="fwc rv">
+        <div class="fwc-icon">🧱</div>
+        <h3>Wall Formwork</h3>
+        <p>Modular steel-frame panel systems for straight, curved, and tapered concrete walls. Adjustable tie systems for clean, even pours of any thickness.</p>
+        <div class="fwc-tags">
+          <span class="ftag">Daily Rental</span>
+          <span class="ftag">Weekly Rental</span>
+          <span class="ftag">Long-Term</span>
+        </div>
+      </div>
+
+      <div class="fwc rv d1">
+        <div class="fwc-icon">📐</div>
+        <h3>Slab &amp; Floor Shoring</h3>
+        <p>High-capacity shoring props, table forms, and decking panels for horizontal concrete slab construction. Fast setup, engineered for heavy loads.</p>
+        <div class="fwc-tags">
+          <span class="ftag">Residential</span>
+          <span class="ftag">Commercial</span>
+          <span class="ftag">Industrial</span>
+        </div>
+      </div>
+
+      <div class="fwc rv d2">
+        <div class="fwc-icon">🏛️</div>
+        <h3>Column &amp; Beam Forms</h3>
+        <p>Round and square column formwork in multiple diameters and heights. Beam forming systems for structural concrete work at any scale.</p>
+        <div class="fwc-tags">
+          <span class="ftag">Round</span>
+          <span class="ftag">Square</span>
+          <span class="ftag">Custom Sizes</span>
+        </div>
+      </div>
+
+    </div>
+
+    <div style="text-align:center; margin-top:3rem;" class="rv">
+      <a href="#contact" class="btn btn-primary">Request Formwork Quote ›</a>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════
+     GALLERY
+════════════════════════════════════ -->
+<section id="gallery" class="section">
+  <div class="rv" style="margin-bottom:2rem;">
+    <span class="eyebrow">Our Work</span>
+    <h2>Project <span class="accent">Gallery</span></h2>
+  </div>
+
+  <!-- Filter buttons -->
+  <div class="gallery-filters rv">
+    <button class="gf-btn active" data-cat="all">All Projects</button>
+    <button class="gf-btn"        data-cat="epoxy">Epoxy Flooring</button>
+    <button class="gf-btn"        data-cat="hvac">HVAC</button>
+    <button class="gf-btn"        data-cat="plumbing">Plumbing</button>
+    <button class="gf-btn"        data-cat="smartlock">Smart Locks</button>
+    <button class="gf-btn"        data-cat="formwork">Formwork</button>
+  </div>
+
+  <div class="gallery-grid">
+
+    <!-- Epoxy -->
+    <div class="gal-item tall" data-cat="epoxy"
+      data-lb="https://www.armorcoatingco.com/wp-content/uploads/2023/06/how-to-maintain-a-shiny-epoxy-garage-floor-1.jpg"
+      data-caption="Epoxy · Mirror-Gloss Garage Floor">
+      <img src="https://www.armorcoatingco.com/wp-content/uploads/2023/06/how-to-maintain-a-shiny-epoxy-garage-floor-1.jpg"
+        alt="Mirror gloss epoxy garage floor" loading="lazy"
+        onerror="this.src='https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=700&q=80'"/>
+      <div class="gal-label">Garage Epoxy · Mirror-Gloss</div>
+    </div>
+
+    <div class="gal-item" data-cat="epoxy"
+      data-lb="https://i.pinimg.com/originals/2e/91/3a/2e913a8a5e22f6d6be29e0e95ba2e8f5.jpg"
+      data-caption="Metallic Epoxy · Marble Swirl Interior">
+      <img src="https://i.pinimg.com/originals/2e/91/3a/2e913a8a5e22f6d6be29e0e95ba2e8f5.jpg"
+        alt="Metallic marble swirl epoxy floor" loading="lazy"
+        onerror="this.src='https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=700&q=80'"/>
+      <div class="gal-label">Metallic · Marble Swirl</div>
+    </div>
+
+    <div class="gal-item" data-cat="epoxy"
+      data-lb="https://wisecoatings.com/wp-content/uploads/2021/04/garage-floor-epoxy-coating.jpg"
+      data-caption="Epoxy · Full Flake Chip System">
+      <img src="https://wisecoatings.com/wp-content/uploads/2021/04/garage-floor-epoxy-coating.jpg"
+        alt="Full flake epoxy floor system" loading="lazy"
+        onerror="this.src='https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=700&q=80'"/>
+      <div class="gal-label">Flake Chip System</div>
+    </div>
+
+    <!-- HVAC -->
+    <div class="gal-item" data-cat="hvac"
+      data-lb="https://www.rosagray.com/wp-content/uploads/2024/06/air-conditioning-installation-course-at-rosa-gray.jpg"
+      data-caption="HVAC · AC System Installation">
+      <img src="https://www.rosagray.com/wp-content/uploads/2024/06/air-conditioning-installation-course-at-rosa-gray.jpg"
+        alt="HVAC air conditioning installation" loading="lazy"
+        onerror="this.src='https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=700&q=80'"/>
+      <div class="gal-label">HVAC · AC Installation</div>
+    </div>
+
+    <div class="gal-item" data-cat="hvac"
+      data-lb="https://apolloair.com/wp-content/uploads/2021/06/air-conditioner-installer.jpg"
+      data-caption="HVAC · Outdoor Condenser Unit">
+      <img src="https://apolloair.com/wp-content/uploads/2021/06/air-conditioner-installer.jpg"
+        alt="Outdoor HVAC condenser unit" loading="lazy"
+        onerror="this.src='https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=700&q=80'"/>
+      <div class="gal-label">HVAC · Outdoor Unit</div>
+    </div>
+
+    <!-- Epoxy before/after -->
+    <div class="gal-item" data-cat="epoxy"
+      data-lb="https://garagefloorcoating.com/wp-content/uploads/2021/09/Epoxy-Flooring-Before-After.jpg"
+      data-caption="Epoxy · Before &amp; After Transformation">
+      <img src="https://garagefloorcoating.com/wp-content/uploads/2021/09/Epoxy-Flooring-Before-After.jpg"
+        alt="Epoxy floor before and after" loading="lazy"
+        onerror="this.src='https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=700&q=80'"/>
+      <div class="gal-label">Epoxy · Before &amp; After</div>
+    </div>
+
+    <!-- Plumbing -->
+    <div class="gal-item" data-cat="plumbing"
+      data-lb="https://mpeplumbingheatinggas.co.uk/wp-content/uploads/2019/08/copper-pipework-installation.jpg"
+      data-caption="Plumbing · Copper Pipe Installation">
+      <img src="https://mpeplumbingheatinggas.co.uk/wp-content/uploads/2019/08/copper-pipework-installation.jpg"
+        alt="Copper plumbing pipe installation" loading="lazy"
+        onerror="this.src='https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?w=700&q=80'"/>
+      <div class="gal-label">Plumbing · Copper Pipes</div>
+    </div>
+
+    <div class="gal-item" data-cat="plumbing"
+      data-lb="https://instantplumbing.ca/wp-content/uploads/2022/05/gas-tankless-water-heater-installation.jpg"
+      data-caption="Plumbing · Tankless Water Heater Install">
+      <img src="https://instantplumbing.ca/wp-content/uploads/2022/05/gas-tankless-water-heater-installation.jpg"
+        alt="Tankless water heater installation" loading="lazy"
+        onerror="this.src='https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?w=700&q=80'"/>
+      <div class="gal-label">Plumbing · Water Heater</div>
+    </div>
+
+    <!-- Smart Lock -->
+    <div class="gal-item" data-cat="smartlock"
+      data-lb="https://m.media-amazon.com/images/I/61QfH7CQFNL._AC_SL1500_.jpg"
+      data-caption="Smart Lock · Keypad Electronic Deadbolt">
+      <img src="https://m.media-amazon.com/images/I/61QfH7CQFNL._AC_SL1500_.jpg"
+        alt="Keypad electronic deadbolt lock" loading="lazy"
+        onerror="this.src='https://images.unsplash.com/photo-1558002038-1055907df827?w=700&q=80'"/>
+      <div class="gal-label">Smart Lock · Keypad</div>
+    </div>
+
+    <div class="gal-item" data-cat="smartlock"
+      data-lb="https://robots.net/wp-content/uploads/2023/07/how-to-install-august-smart-lock-1689319965.jpg"
+      data-caption="Smart Lock · August Wi-Fi Install">
+      <img src="https://robots.net/wp-content/uploads/2023/07/how-to-install-august-smart-lock-1689319965.jpg"
+        alt="August smart lock installation" loading="lazy"
+        onerror="this.src='https://images.unsplash.com/photo-1558002038-1055907df827?w=700&q=80'"/>
+      <div class="gal-label">Smart Lock · Wi-Fi Install</div>
+    </div>
+
+    <!-- Formwork -->
+    <div class="gal-item" data-cat="formwork"
+      data-lb="https://scaxa.com/wp-content/uploads/2023/08/types-of-scaffolding-1.jpg"
+      data-caption="Formwork · Scaffolding System">
+      <img src="https://scaxa.com/wp-content/uploads/2023/08/types-of-scaffolding-1.jpg"
+        alt="Construction formwork scaffolding system" loading="lazy"
+        onerror="this.src='https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=700&q=80'"/>
+      <div class="gal-label">Formwork · Scaffolding</div>
+    </div>
+
+    <div class="gal-item" data-cat="formwork"
+      data-lb="https://formworkdirect.com/wp-content/uploads/2021/03/GASS-Shoring-System-1.jpg"
+      data-caption="Formwork · Slab Shoring Props">
+      <img src="https://formworkdirect.com/wp-content/uploads/2021/03/GASS-Shoring-System-1.jpg"
+        alt="Concrete slab shoring props formwork" loading="lazy"
+        onerror="this.src='https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=700&q=80'"/>
+      <div class="gal-label">Formwork · Slab Shoring</div>
+    </div>
+
+  </div><!-- /.gallery-grid -->
+</section>
+
+<!-- ════════════════════════════════════
+     ABOUT
+════════════════════════════════════ -->
+<section id="about" class="section" style="background:var(--bg2);">
+  <div class="about-layout">
+
+    <!-- Photo stack -->
+    <div class="about-photo-stack rv">
+      <div class="about-photo-main">
+        <img
+          src="https://www.armorcoatingco.com/wp-content/uploads/2023/06/how-to-maintain-a-shiny-epoxy-garage-floor-1.jpg"
+          alt="ProCore team epoxy flooring work"
+          loading="lazy"
+          onerror="this.src='https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=900&q=80'"
+        />
+      </div>
+      <div class="about-photo-inset">
+        <img
+          src="https://mpeplumbingheatinggas.co.uk/wp-content/uploads/2019/08/copper-pipework-installation.jpg"
+          alt="Plumbing installation work"
+          loading="lazy"
+          onerror="this.src='https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?w=600&q=80'"
+        />
+      </div>
+      <div class="about-badge">
+        <div class="ab-num">20</div>
+        <div class="ab-lbl">Years in<br>Business</div>
+      </div>
+    </div>
+
+    <!-- Text -->
+    <div class="rv d2">
+      <span class="eyebrow">About ProCore</span>
+      <h2>Your Trusted <span class="accent">Home Services</span> Partner.</h2>
+      <p>
+        Founded in 2005, ProCore Services has grown from a two-man epoxy crew into a full-service home improvement company
+        trusted by thousands of homeowners, contractors, and businesses across
+        <strong>Ottawa, Canada</strong> and <strong>Djibouti, Africa</strong>.
+      </p>
+      <p>
+        Our technicians are fully licensed, background-checked, and trained to the highest industry standards.
+        We run every project with our own in-house crew — no subcontractors, no surprises, no exceptions.
+      </p>
+      <p>
+        From a garage epoxy coat to a full commercial HVAC system — every job gets the same uncompromising
+        attention to detail that has made ProCore the region's most trusted name in home services.
+      </p>
+      <div class="about-badges">
+        <span class="abadge">EPA Certified</span>
+        <span class="abadge">NATE Certified HVAC</span>
+        <span class="abadge">Master Plumber</span>
+        <span class="abadge">Smart Home Certified</span>
+        <span class="abadge">Licensed &amp; Insured</span>
+        <span class="abadge">BBB A+ Rated</span>
+        <span class="abadge">3-Year Warranty</span>
+      </div>
+      <div style="margin-top:2rem; display:flex; gap:.8rem; flex-wrap:wrap;">
+        <a href="#contact" class="btn btn-primary">Get a Free Quote ›</a>
+        <a href="#gallery" class="btn btn-outline">See Our Work</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ════════════════════════════════════
+     WHY US
+════════════════════════════════════ -->
+<section id="why" class="section">
+  <div class="rv" style="text-align:center; margin-bottom:1rem;">
+    <span class="eyebrow" style="justify-content:center;">Why Choose Us</span>
+    <h2>We Do Things <span class="accent">Right.</span></h2>
+  </div>
+  <div class="why-grid">
+    <div class="why-card rv">
+      <div class="why-num">01</div>
+      <h4>Transparent Pricing</h4>
+      <p>Detailed written quote before any work begins. No surprise invoices, no hidden fees — we quote it and we stick to it.</p>
+    </div>
+    <div class="why-card rv d1">
+      <div class="why-num">02</div>
+      <h4>On-Time Guaranteed</h4>
+      <p>If we arrive late without prior notice, your job gets an automatic discount. We respect your time and your schedule.</p>
+    </div>
+    <div class="why-card rv d2">
+      <div class="why-num">03</div>
+      <h4>Premium Materials</h4>
+      <p>Industry-leading brands and professional-grade products on every single job. No substitutions, no shortcuts allowed.</p>
+    </div>
+    <div class="why-card rv d3">
+      <div class="why-num">04</div>
+      <h4>Full Warranty</h4>
+      <p>3-year epoxy warranty, 1-year HVAC and plumbing labour guarantee, and manufacturer warranty support on all smart locks.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════
+     PROCESS
+════════════════════════════════════ -->
+<section id="process" class="section" style="background:var(--bg2);">
+  <div class="rv" style="text-align:center; margin-bottom:1rem;">
+    <span class="eyebrow" style="justify-content:center;">How It Works</span>
+    <h2>Simple Process, <span class="accent">Zero Stress.</span></h2>
+  </div>
+  <div class="process-steps-row">
+    <div class="proc-step rv">
+      <div class="proc-circle">01</div>
+      <h4>Contact Us</h4>
+      <p>Call, email, or fill out our form. Tell us what you need — any service, any size project.</p>
+    </div>
+    <div class="proc-step rv d1">
+      <div class="proc-circle">02</div>
+      <h4>Free On-Site Estimate</h4>
+      <p>We visit, assess, and deliver a detailed written quote within 24 hours — no obligation.</p>
+    </div>
+    <div class="proc-step rv d2">
+      <div class="proc-circle">03</div>
+      <h4>We Execute</h4>
+      <p>Our licensed crew arrives on schedule, prepped and professional. We protect your space throughout.</p>
+    </div>
+    <div class="proc-step rv d3">
+      <div class="proc-circle">04</div>
+      <h4>You're Satisfied</h4>
+      <p>Walk-through inspection with you. We're not finished until you're genuinely 100% happy.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════
+     TESTIMONIALS
+════════════════════════════════════ -->
+<section id="testimonials" class="section">
+  <div class="rv" style="margin-bottom:1rem;">
+    <span class="eyebrow">Client Reviews</span>
+    <h2>What They <span class="accent">Say.</span></h2>
+  </div>
+  <div class="testi-grid">
+    <div class="testi-card rv">
+      <div class="stars">★★★★★</div>
+      <q>ProCore coated our garage — three years later it still looks brand new. The most professional crew we have ever hired. Absolutely stunning finish.</q>
+      <div class="testi-name">Jennifer M.</div>
+      <div class="testi-type">Ottawa Homeowner · Garage Epoxy Flooring</div>
+    </div>
+    <div class="testi-card rv d1">
+      <div class="stars">★★★★★</div>
+      <q>Our AC died mid-July. ProCore had a brand-new system running within two days. The technician was clean, fast, and explained everything clearly. Outstanding.</q>
+      <div class="testi-name">David &amp; Tanya R.</div>
+      <div class="testi-type">Ottawa · HVAC System Installation</div>
+    </div>
+    <div class="testi-card rv d2">
+      <div class="stars">★★★★★</div>
+      <q>Fingerprint smart lock installed in under an hour. The app was fully set up on the spot. I'll never go back to a regular key lock again. Excellent service.</q>
+      <div class="testi-name">Michael O.</div>
+      <div class="testi-type">Ottawa · Smart Door Lock Installation</div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════
+     CTA BAND
+════════════════════════════════════ -->
+<section id="cta-band">
+  <div class="cta-text">
+    <h2>Ready to Start <span style="color:rgba(255,255,255,.7);">Your Project?</span></h2>
+    <p class="cta-sub">Free estimate · Ottawa &amp; Djibouti · Most quotes within 24 hours.</p>
+  </div>
+  <a href="#contact" class="btn btn-white">Get My Free Quote ›</a>
+</section>
+
+<!-- ════════════════════════════════════
+     CONTACT
+════════════════════════════════════ -->
+<section id="contact" class="section" style="background:var(--bg2);">
+  <div class="contact-layout">
+
+    <!-- Info -->
+    <div class="contact-info">
+      <span class="eyebrow">Get In Touch</span>
+      <h2>Let's Talk <span class="accent">Your Project.</span></h2>
+      <p>
+        We respond to all inquiries within 2 business hours.
+        Emergency plumbing and HVAC calls answered 24/7 — in Ottawa and Djibouti.
+      </p>
+
+      <div class="contact-photo">
+        <img
+          src="https://wisecoatings.com/wp-content/uploads/2021/04/garage-floor-epoxy-coating.jpg"
+          alt="Our completed epoxy flooring work"
+          loading="lazy"
+          onerror="this.src='https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80'"
+        />
+      </div>
+
+      <div class="contact-items">
+        <div class="contact-item">
+          <div class="ci-icon">📞</div>
+          <div>
+            <div class="ci-label">Phone</div>
+            <div class="ci-value"><a href="tel:25377834309">253 77 834309</a></div>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="ci-icon">✉️</div>
+          <div>
+            <div class="ci-label">Email</div>
+            <div class="ci-value"><a href="mailto:bgptekottawa@outlook.com">bgptekottawa@outlook.com</a></div>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="ci-icon">📍</div>
+          <div>
+            <div class="ci-label">Ottawa Office</div>
+            <div class="ci-value">Ottawa, Ontario, Canada 🇨🇦</div>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="ci-icon">📍</div>
+          <div>
+            <div class="ci-label">Djibouti Office</div>
+            <div class="ci-value">Djibouti City, Djibouti, Africa 🇩🇯</div>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="ci-icon">🕐</div>
+          <div>
+            <div class="ci-label">Business Hours</div>
+            <div class="ci-value">
+              Mon–Fri: 7am – 6pm &nbsp;·&nbsp; Sat: 8am – 3pm<br/>
+              <span style="color:var(--green); font-weight:600;">24/7 Emergency Line Available</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Form -->
+    <form class="contact-form rv" onsubmit="return false;" aria-label="Contact form">
+      <div class="form-row">
+        <div class="form-group">
+          <label for="fname">First Name</label>
+          <input type="text" id="fname" name="first_name" placeholder="John" required/>
+        </div>
+        <div class="form-group">
+          <label for="lname">Last Name</label>
+          <input type="text" id="lname" name="last_name" placeholder="Smith" required/>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="phone">Phone</label>
+          <input type="tel" id="phone" name="phone" placeholder="253 77 000000"/>
+        </div>
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" placeholder="you@example.com" required/>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="location">Your Location</label>
+        <select id="location" name="location">
+          <option value="">— Select Location —</option>
+          <option value="ottawa">Ottawa, Canada</option>
+          <option value="djibouti">Djibouti, Africa</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="service">Service Needed</label>
+        <select id="service" name="service">
+          <option value="">— Select a Service —</option>
+          <option value="epoxy-garage">Epoxy Flooring — Garage</option>
+          <option value="epoxy-basement">Epoxy Flooring — Basement</option>
+          <option value="epoxy-metallic">Metallic / Decorative Epoxy</option>
+          <option value="epoxy-commercial">Epoxy — Commercial / Industrial</option>
+          <option value="hvac-install">HVAC — New Installation</option>
+          <option value="hvac-repair">HVAC — Repair / Maintenance</option>
+          <option value="plumbing-repair">Plumbing — General Repair</option>
+          <option value="plumbing-emergency">Plumbing — Emergency (24/7)</option>
+          <option value="plumbing-heater">Water Heater Installation</option>
+          <option value="smartlock">Electronic Door Lock Install</option>
+          <option value="formwork">Formwork Rental</option>
+          <option value="bundle">Bundle Package (Save 20%)</option>
+          <option value="other">Other / Not Sure Yet</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="message">Project Details</label>
+        <textarea id="message" name="message"
+          placeholder="Tell us about your project — square footage, number of doors, formwork duration, timeline, location, or any specific requirements…"
+        ></textarea>
+      </div>
+      <button type="submit" class="form-submit" id="form-submit">Send My Request →</button>
+    </form>
+
+  </div>
+</section>
+
+<!-- ════════════════════════════════════
+     FOOTER
+════════════════════════════════════ -->
+<footer>
+  <!-- Service-relevant photo bar -->
+  <div class="footer-photo-bar">
+    <div class="fbar-ph"><img src="https://wisecoatings.com/wp-content/uploads/2021/04/garage-floor-epoxy-coating.jpg" alt="Epoxy floor" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=300&q=70'"/></div>
+    <div class="fbar-ph"><img src="https://i.pinimg.com/originals/2e/91/3a/2e913a8a5e22f6d6be29e0e95ba2e8f5.jpg" alt="Metallic epoxy" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=300&q=70'"/></div>
+    <div class="fbar-ph"><img src="https://www.rosagray.com/wp-content/uploads/2024/06/air-conditioning-installation-course-at-rosa-gray.jpg" alt="HVAC" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=300&q=70'"/></div>
+    <div class="fbar-ph"><img src="https://mpeplumbingheatinggas.co.uk/wp-content/uploads/2019/08/copper-pipework-installation.jpg" alt="Plumbing" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?w=300&q=70'"/></div>
+    <div class="fbar-ph"><img src="https://m.media-amazon.com/images/I/61QfH7CQFNL._AC_SL1500_.jpg" alt="Smart lock" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1558002038-1055907df827?w=300&q=70'"/></div>
+    <div class="fbar-ph"><img src="https://scaxa.com/wp-content/uploads/2023/08/types-of-scaffolding-1.jpg" alt="Formwork" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=300&q=70'"/></div>
+  </div>
+
+  <div class="footer-grid">
+    <!-- Brand -->
+    <div class="footer-brand">
+      <a href="#home" class="nav-logo">Pro<span>Core</span></a>
+      <p>Trusted for epoxy flooring, HVAC, plumbing, smart locks, and formwork rental. Serving Ottawa, Canada and Djibouti, Africa since 2005.</p>
+      <div class="social-links">
+        <a href="#" class="social-link" aria-label="Facebook">f</a>
+        <a href="#" class="social-link" aria-label="LinkedIn">in</a>
+        <a href="#" class="social-link" aria-label="Instagram">ig</a>
+        <a href="#" class="social-link" aria-label="YouTube">yt</a>
+      </div>
+    </div>
+    <!-- Services -->
+    <div class="footer-col">
+      <h5>Services</h5>
+      <ul>
+        <li><a href="#epoxy">Epoxy Flooring</a></li>
+        <li><a href="#hvac">HVAC Systems</a></li>
+        <li><a href="#plumbing">Plumbing</a></li>
+        <li><a href="#smartlock">Smart Door Locks</a></li>
+        <li><a href="#formwork">Formwork Rental</a></li>
+      </ul>
+    </div>
+    <!-- Company -->
+    <div class="footer-col">
+      <h5>Company</h5>
+      <ul>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#why">Why ProCore</a></li>
+        <li><a href="#process">Our Process</a></li>
+        <li><a href="#testimonials">Reviews</a></li>
+        <li><a href="#contact">Careers</a></li>
+      </ul>
+    </div>
+    <!-- Contact -->
+    <div class="footer-col footer-contact">
+      <h5>Contact</h5>
+      <p>
+        <strong style="color:var(--blue)">📞 253 77 834309</strong><br/>
+        bgptekottawa@outlook.com<br/><br/>
+        🇨🇦 Ottawa, Canada<br/>
+        🇩🇯 Djibouti, Africa<br/><br/>
+        Mon–Fri · 7am – 6pm<br/>
+        Sat · 8am – 3pm<br/>
+        <span style="color:var(--green); font-weight:600;">● 24/7 Emergency Line</span>
+      </p>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2026 ProCore Services. All Rights Reserved.</p>
+    <p><a href="#">Privacy Policy</a> &nbsp;·&nbsp; <a href="#">Terms of Service</a></p>
+    <p>Ottawa 🇨🇦 &nbsp;·&nbsp; Djibouti 🇩🇯 &nbsp;·&nbsp; Licensed &amp; Insured</p>
+  </div>
+</footer>
+
+<!-- JavaScript -->
+<script src="script.js"></script>
+
+</body>
+</html>

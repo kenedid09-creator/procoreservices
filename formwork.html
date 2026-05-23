@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Formwork Rental | ProCore Services</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@300;400;500;600;700&family=Barlow+Condensed:wght@300;400;600;700&display=swap" rel="stylesheet"/>
+<style>
+:root{
+  --bg:#0c1520;--bg2:#10202f;--bg3:#152635;--card:#1c3040;--card2:#223848;
+  --bl:#1e6fa3;--bl2:#0f4c6e;--tl:#00b4d8;--tl2:#0096b8;
+  --cr:#e8f0f5;--off:#9fb4c2;--dm:rgba(232,240,245,.52);--bdr:rgba(232,240,245,.08);
+  --gn:#22c55e;--gl:rgba(30,111,163,.14);--tlg:rgba(0,180,216,.12);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:'Barlow',sans-serif;background:var(--bg);color:var(--cr);overflow-x:hidden;}
+img{display:block;width:100%;height:100%;object-fit:cover;}
+a{text-decoration:none;color:inherit;}
+
+/* UTIL */
+.tag{font-family:'Barlow Condensed',sans-serif;font-size:.7rem;font-weight:700;letter-spacing:.28em;text-transform:uppercase;color:var(--tl);display:flex;align-items:center;gap:.6rem;margin-bottom:.9rem;}
+.tag::before{content:'';display:block;width:22px;height:2px;background:var(--tl);}
+h2{font-family:'Bebas Neue',sans-serif;font-size:clamp(2.4rem,4.5vw,4.2rem);line-height:.92;color:var(--cr);margin-bottom:1.3rem;}
+.ac{color:var(--tl);}
+.btn{display:inline-flex;align-items:center;gap:.5rem;padding:.9rem 2rem;font-family:'Barlow Condensed',sans-serif;font-size:1rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;border:2px solid var(--bl);transition:all .25s;cursor:pointer;}
+.btn-fill{background:var(--bl);color:#fff;}
+.btn-fill:hover{background:var(--tl);border-color:var(--tl);}
+.btn-line{background:transparent;color:var(--cr);border-color:rgba(232,240,245,.22);}
+.btn-line:hover{border-color:var(--tl);color:var(--tl);}
+.rv{opacity:0;transform:translateY(26px);transition:opacity .6s,transform .6s;}
+.rv.in{opacity:1;transform:none;}
+.d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:9000;height:70px;display:flex;align-items:center;justify-content:space-between;padding:0 5%;background:rgba(12,21,32,.97);backdrop-filter:blur(20px);border-bottom:1px solid rgba(30,111,163,.25);transition:height .3s;}
+nav.sm{height:58px;border-bottom-color:rgba(0,180,216,.3);}
+.logo{font-family:'Bebas Neue',sans-serif;font-size:1.9rem;letter-spacing:.06em;color:var(--cr);}
+.logo span{color:var(--tl);}
+.nl{display:flex;list-style:none;align-items:center;gap:1.4rem;}
+.nl>li{position:relative;}
+.nl a{font-size:.75rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--off);transition:color .2s;}
+.nl a:hover,.nl a.on{color:var(--tl);}
+.nl>li>a.has-drop::after{content:'▾';font-size:.66rem;opacity:.55;margin-left:.25rem;transition:transform .2s;}
+.nl>li:hover>a.has-drop::after{transform:rotate(180deg);}
+.nl .drop{position:absolute;top:calc(100% + 10px);left:50%;transform:translateX(-50%);background:var(--bg3);border:1px solid var(--bdr);min-width:220px;display:none;flex-direction:column;box-shadow:0 20px 56px rgba(0,0,0,.55);z-index:100;}
+.nl>li:hover .drop{display:flex;}
+.nl .drop a{padding:.72rem 1.2rem;font-size:.76rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--off);border-bottom:1px solid var(--bdr);display:flex;align-items:center;gap:.65rem;transition:all .2s;}
+.nl .drop a:last-child{border-bottom:none;}
+.nl .drop a:hover{background:var(--gl);color:var(--tl);padding-left:1.6rem;}
+.nl .drop a.active-svc{color:var(--tl);background:var(--gl);}
+.np{font-family:'Barlow Condensed',sans-serif!important;font-size:.92rem!important;font-weight:700!important;color:var(--tl)!important;}
+.nc{background:var(--bl)!important;color:#fff!important;padding:.4rem 1rem;font-weight:700!important;transition:background .2s!important;}
+.nc:hover{background:var(--tl)!important;}
+.bur{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px;}
+.bur span{width:24px;height:2px;background:var(--cr);display:block;transition:.3s;}
+
+/* SERVICE PAGE HERO */
+.svc-hero{position:relative;height:72vh;min-height:480px;max-height:700px;display:flex;align-items:flex-end;padding:0 5% 5rem;overflow:hidden;margin-top:70px;}
+.svc-hero-bg{position:absolute;inset:0;}
+.svc-hero-bg img{width:100%;height:100%;object-fit:cover;object-position:center;}
+.svc-hero-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(110deg,rgba(12,21,32,.95) 35%,rgba(12,21,32,.65) 65%,rgba(30,111,163,.1) 100%);}
+.svc-hero-content{position:relative;z-index:2;max-width:720px;}
+.svc-hero-content h1{font-family:'Bebas Neue',sans-serif;font-size:clamp(3.2rem,7vw,6.5rem);line-height:.88;color:var(--cr);}
+.svc-hero-content p{font-size:1rem;font-weight:300;color:var(--dm);max-width:500px;line-height:1.7;margin-top:1.2rem;}
+.svc-hero-btns{display:flex;gap:1rem;margin-top:2rem;flex-wrap:wrap;}
+.breadcrumb{display:flex;align-items:center;gap:.5rem;font-size:.72rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--off);margin-bottom:1rem;}
+.breadcrumb a{color:var(--tl);transition:opacity .2s;}
+.breadcrumb a:hover{opacity:.7;}
+.breadcrumb::before{content:'';display:inline-block;width:16px;height:2px;background:var(--tl);margin-right:.3rem;}
+
+/* TICKER */
+.ticker{background:linear-gradient(90deg,var(--bl2),var(--bl),var(--bl2));padding:.65rem 0;overflow:hidden;white-space:nowrap;}
+.ttr{display:inline-flex;animation:tick 34s linear infinite;}
+.ttr span{font-family:'Barlow Condensed',sans-serif;font-size:.86rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(232,240,245,.92);padding:0 2rem;}
+.ttr span::before{content:'◆  ';opacity:.4;}
+
+/* OVERVIEW SECTION */
+.sec{padding:6rem 5%;}
+.overview-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:5rem;align-items:start;}
+.overview-text p{font-size:.97rem;line-height:1.78;color:var(--dm);font-weight:300;margin-bottom:1rem;}
+.feat-list{display:flex;flex-direction:column;gap:.75rem;margin-top:1.6rem;}
+.feat-item{display:flex;gap:1rem;align-items:flex-start;padding:1rem 1.2rem;background:var(--card);border-left:3px solid var(--tl);transition:background .25s;}
+.feat-item:hover{background:var(--card2);}
+.feat-ico{font-size:1.4rem;flex-shrink:0;line-height:1;margin-top:.05rem;}
+.feat-item h4{font-family:'Barlow Condensed',sans-serif;font-size:.9rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--cr);margin-bottom:.2rem;}
+.feat-item p{font-size:.82rem;color:var(--off);line-height:1.6;font-weight:300;}
+
+/* STATS ROW */
+.stats-row{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;margin-top:3rem;}
+.stat-box{background:var(--bg2);padding:1.4rem 1rem;text-align:center;}
+.stat-box:nth-child(even){background:var(--bl);}
+.stat-n{font-family:'Bebas Neue',sans-serif;font-size:2.2rem;color:var(--tl);line-height:1;}
+.stat-box:nth-child(even) .stat-n{color:#fff;}
+.stat-l{font-size:.62rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--off);margin-top:.2rem;}
+.stat-box:nth-child(even) .stat-l{color:rgba(255,255,255,.72);}
+
+/* GALLERY */
+.gallery-sec{background:var(--bg2);padding:5rem 5%;}
+.gallery-hdr{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:2.5rem;flex-wrap:wrap;gap:1rem;}
+.gallery-hdr h2{margin-bottom:0;}
+
+/* Standard photo grid */
+.photo-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:3px;}
+.ph{overflow:hidden;position:relative;cursor:pointer;height:240px;}
+.ph img{width:100%;height:100%;object-fit:cover;transition:transform .5s;}
+.ph:hover img{transform:scale(1.07);}
+.ph::after{content:'';position:absolute;inset:0;background:rgba(0,180,216,0);transition:.3s;}
+.ph:hover::after{background:rgba(0,180,216,.08);}
+.ph-lbl{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(to top,rgba(12,21,32,.9),transparent);padding:.85rem 1rem .7rem;font-family:'Barlow Condensed',sans-serif;font-size:.72rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(232,240,245,.9);opacity:0;transform:translateY(5px);transition:all .3s;z-index:2;}
+.ph:hover .ph-lbl{opacity:1;transform:none;}
+.ph.tall{grid-row:span 2;height:483px;}
+.ph.wide{grid-column:span 2;height:240px;}
+
+/* 4-column grid for products */
+.product-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;}
+.prod-card{background:var(--bg2);border:1px solid var(--bdr);display:flex;flex-direction:column;align-items:center;padding:1.8rem 1.2rem 1.5rem;cursor:pointer;transition:transform .3s,box-shadow .3s,border-color .3s;position:relative;overflow:hidden;}
+.prod-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--bl),var(--tl));transform:scaleX(0);transition:transform .3s;}
+.prod-card:hover{transform:translateY(-6px);box-shadow:0 20px 50px rgba(0,180,216,.12);border-color:rgba(0,180,216,.3);}
+.prod-card:hover::before{transform:scaleX(1);}
+.prod-img{width:100%;height:180px;display:flex;align-items:center;justify-content:center;overflow:hidden;margin-bottom:1rem;background:#f4f4f6;border-radius:2px;}
+.prod-img img{max-width:100%;max-height:180px;width:auto;height:auto;object-fit:contain;transition:transform .4s;}
+.prod-card:hover .prod-img img{transform:scale(1.07);}
+.prod-card h4{font-family:'Barlow Condensed',sans-serif;font-size:.88rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--cr);text-align:center;margin-bottom:.4rem;}
+.prod-card p{font-size:.76rem;color:var(--off);text-align:center;line-height:1.55;font-weight:300;}
+
+/* SERVICES NAV STRIP */
+.svc-nav-strip{background:var(--bg3);border-top:1px solid var(--bdr);border-bottom:1px solid var(--bdr);padding:1rem 5%;overflow-x:auto;white-space:nowrap;}
+.svc-nav-inner{display:inline-flex;gap:.5rem;}
+.svc-pill{display:inline-flex;align-items:center;gap:.4rem;padding:.42rem 1.1rem;font-family:'Barlow Condensed',sans-serif;font-size:.8rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;border:1px solid var(--bdr);color:var(--off);cursor:pointer;transition:all .2s;white-space:nowrap;}
+.svc-pill:hover{background:var(--bl);border-color:var(--bl);color:#fff;}
+.svc-pill.active{background:var(--tl);border-color:var(--tl);color:var(--bg);}
+
+/* CTA BAND */
+.cta-band{background:linear-gradient(135deg,var(--bl2) 0%,var(--bl) 60%,#1388bc 100%);padding:5rem 5%;display:flex;align-items:center;justify-content:space-between;gap:3rem;flex-wrap:wrap;position:relative;overflow:hidden;}
+.cta-band::before{content:'GET STARTED';position:absolute;right:-1rem;top:50%;transform:translateY(-50%);font-family:'Bebas Neue',sans-serif;font-size:10rem;color:rgba(255,255,255,.05);line-height:1;pointer-events:none;}
+.cta-band h2{color:#fff;margin-bottom:.5rem;}
+.cta-band .csub{color:rgba(255,255,255,.82);font-weight:300;font-size:.96rem;margin-top:.4rem;}
+.cta-btns{display:flex;gap:1rem;flex-wrap:wrap;position:relative;z-index:1;}
+.cta-txt{position:relative;z-index:1;}
+
+/* FOOTER */
+footer{background:var(--bg);padding:4rem 5% 2rem;border-top:1px solid var(--bdr);}
+.fgrid{display:grid;grid-template-columns:2.2fr 1fr 1fr 1fr;gap:3rem;padding-bottom:2.5rem;border-bottom:1px solid var(--bdr);}
+.fbrand .logo{font-size:2rem;display:inline-block;margin-bottom:.9rem;}
+.fbrand p{font-size:.8rem;color:var(--off);font-weight:300;line-height:1.65;max-width:240px;margin-bottom:1.2rem;}
+.soc{display:flex;gap:.65rem;}
+.socl{width:2.3rem;height:2.3rem;border:1px solid var(--bdr);display:flex;align-items:center;justify-content:center;color:var(--off);font-size:.78rem;transition:all .2s;}
+.socl:hover{border-color:var(--tl);color:var(--tl);}
+.fcol h5{font-family:'Barlow Condensed',sans-serif;font-size:.72rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--tl);margin-bottom:1rem;}
+.fcol ul{list-style:none;display:flex;flex-direction:column;gap:.55rem;}
+.fcol ul a{color:var(--off);font-size:.84rem;font-weight:300;transition:color .2s;}
+.fcol ul a:hover{color:var(--cr);}
+.fhrs p{font-size:.82rem;color:var(--off);font-weight:300;line-height:1.9;}
+.fbot{display:flex;justify-content:space-between;align-items:center;padding-top:1.5rem;flex-wrap:wrap;gap:.8rem;}
+.fbot p,.fbot a{font-size:.74rem;color:rgba(159,180,194,.38);}
+.fbot a:hover{color:var(--tl);}
+
+/* LIGHTBOX */
+.lb{position:fixed;inset:0;z-index:99999;background:rgba(0,0,0,.97);display:none;align-items:center;justify-content:center;padding:2rem;}
+.lb.open{display:flex;}
+.lb img{max-width:90vw;max-height:85vh;object-fit:contain;width:auto;height:auto;}
+.lbx{position:absolute;top:1.5rem;right:2rem;font-size:1.8rem;color:var(--cr);cursor:pointer;font-family:'Bebas Neue',sans-serif;}
+.lbx:hover{color:var(--tl);}
+.lbcap{position:absolute;bottom:1.5rem;left:50%;transform:translateX(-50%);font-family:'Barlow Condensed',sans-serif;font-size:.82rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:rgba(232,240,245,.55);white-space:nowrap;}
+#btt{position:fixed;bottom:2rem;right:2rem;z-index:5000;width:3rem;height:3rem;background:var(--bl);color:#fff;border:none;cursor:pointer;font-size:1.1rem;display:none;align-items:center;justify-content:center;transition:background .2s;}
+#btt:hover{background:var(--tl);}
+#btt.show{display:flex;}
+
+@keyframes fu{from{opacity:0;transform:translateY(20px);}to{opacity:1;transform:none;}}
+@keyframes tick{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+
+/* RESPONSIVE */
+@media(max-width:1100px){
+  .overview-grid{grid-template-columns:1fr;}
+  .product-grid{grid-template-columns:repeat(3,1fr);}
+  .photo-grid{grid-template-columns:repeat(2,1fr);}
+  .ph.tall{grid-row:auto;height:240px;}
+  .ph.wide{grid-column:auto;}
+  .stats-row{grid-template-columns:repeat(2,1fr);}
+}
+@media(max-width:768px){
+  nav{padding:0 4%;}
+  .nl{display:none;position:fixed;top:70px;left:0;right:0;bottom:0;background:rgba(12,21,32,.99);flex-direction:column;padding:2.5rem 5%;gap:1.8rem;align-items:flex-start;z-index:8999;overflow-y:auto;}
+  .nl.open{display:flex;}
+  .nl .drop{position:static;transform:none;box-shadow:none;border:none;background:transparent;padding-left:1rem;display:flex!important;flex-direction:column;gap:.3rem;margin-top:.5rem;}
+  .nl .drop a{padding:.4rem 0;border-bottom:none;}
+  .bur{display:flex;}
+  .svc-hero{height:55vh;min-height:360px;padding-bottom:3rem;}
+  .sec{padding:4rem 4%;}
+  .gallery-sec{padding:4rem 4%;}
+  .product-grid{grid-template-columns:1fr 1fr;}
+  .photo-grid{grid-template-columns:1fr 1fr;}
+  .fgrid{grid-template-columns:1fr 1fr;gap:2rem;}
+  .stats-row{grid-template-columns:repeat(2,1fr);}
+}
+@media(max-width:480px){
+  .product-grid{grid-template-columns:1fr;}
+  .stats-row{grid-template-columns:1fr 1fr;}
+}
+</style>
+
+</head>
+<body>
+
+<div class="lb" id="lb"><span class="lbx" id="lbx">✕ CLOSE</span><img id="lbimg" src="" alt=""/><div class="lbcap" id="lbcap"></div></div>
+<button id="btt" title="Back to top">▲</button>
+<nav id="nav">
+  <a href="index.html" class="logo">Pro<span>Core</span></a>
+  <ul class="nl" id="nl">
+    <li><a href="index.html#about">About</a></li>
+    <li>
+      <a href="index.html#services" class="has-drop">Services</a>
+      <div class="drop"><a href="epoxy.html">🏗️ Epoxy Flooring</a>
+<a href="hvac.html">❄️ HVAC Systems</a>
+<a href="electricity.html">⚡ Electricity</a>
+<a href="plumbing.html">🔧 Plumbing</a>
+<a href="hydroseeding.html">🌱 Hydroseeding</a>
+<a href="water-treatment.html">💧 Water Softener & Filter</a>
+<a href="smart-locks.html">🔒 Smart Door Locks</a>
+<a href="formwork.html" class="active-svc">🏗️ Formwork Rental</a></div>
+    </li>
+    <li><a href="index.html#gallery">Gallery</a></li>
+    <li><a href="index.html#why">Why Us</a></li>
+    <li><a href="index.html#areas">Areas</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+    <li><a href="tel:13433360949" class="np">📞 1 343 336 0949</a></li>
+    <li><a href="index.html#contact" class="nc">Free Quote</a></li>
+  </ul>
+  <button class="bur" id="bur"><span></span><span></span><span></span></button>
+</nav>
+
+<!-- HERO -->
+<section class="svc-hero">
+  <div class="svc-hero-bg"><img src="Formwork Rental/Formwork-Table-Form-w.webp" alt="Formwork Rental"/></div>
+  <div class="svc-hero-content">
+    <div class="breadcrumb"><a href="index.html">Home</a> › Formwork Rental</div>
+    <div class="tag">Equipment Rental</div>
+    <h1>Construction Equipment
+Rental & Supply</h1>
+    <p>ProCore rents high-quality formwork systems, steel props, scaffolding, and construction equipment to contractors and builders in Ottawa and Djibouti.</p>
+    <div class="svc-hero-btns">
+      <a href="index.html#contact" class="btn btn-fill">Get a Free Quote ›</a>
+      <a href="index.html#contact" class="btn btn-line">Call Us Now</a>
+    </div>
+  </div>
+</section>
+
+
+<div class="ticker">
+  <div class="ttr">
+    <span>Epoxy Flooring</span><span>HVAC Systems</span><span>Electrical Services</span>
+    <span>Plumbing</span><span>Smart Locks</span><span>Hydroseeding</span>
+    <span>Water Treatment</span><span>Formwork Rental</span><span>Licensed &amp; Insured</span>
+    <span>Ottawa 🇨🇦</span><span>Djibouti 🇩🇯</span><span>Since 2005</span>
+    <span>Epoxy Flooring</span><span>HVAC Systems</span><span>Electrical Services</span>
+    <span>Plumbing</span><span>Smart Locks</span><span>Hydroseeding</span>
+    <span>Water Treatment</span><span>Formwork Rental</span><span>Licensed &amp; Insured</span>
+    <span>Ottawa 🇨🇦</span><span>Djibouti 🇩🇯</span><span>Since 2005</span>
+  </div>
+</div>
+
+<div class="svc-nav-strip">
+  <div class="svc-nav-inner">
+    <a href="epoxy.html" class="svc-pill">🏗️ Epoxy</a>
+    <a href="hvac.html" class="svc-pill">❄️ HVAC</a>
+    <a href="electricity.html" class="svc-pill">⚡ Electricity</a>
+    <a href="plumbing.html" class="svc-pill">🔧 Plumbing</a>
+    <a href="hydroseeding.html" class="svc-pill">🌱 Hydroseeding</a>
+    <a href="water-treatment.html" class="svc-pill">💧 Water Treatment</a>
+    <a href="smart-locks.html" class="svc-pill">🔒 Smart Locks</a>
+    <a href="formwork.html" class="svc-pill active">🏗️ Formwork</a>
+  </div>
+</div>
+
+<!-- OVERVIEW -->
+<section class="sec" style="background:var(--bg2);">
+  <div class="overview-grid">
+    <div class="overview-text rv">
+      <div class="tag">Equipment Rental</div>
+      <h2>Construction Equipment
+Rental & Supply<br><span class="ac">Services</span></h2>
+      <p>ProCore rents high-quality formwork systems, steel props, scaffolding, and construction equipment to contractors and builders in Ottawa and Djibouti.</p>
+<p>From slab table forms and shoring props to excavators and material supply, we have the equipment your project needs — delivered on time and in perfect working condition.</p>
+      <div class="stats-row rv d2">
+        <div class="stat-box"><div class="stat-n">Fleet</div><div class="stat-l">Equipment</div></div>
+<div class="stat-box"><div class="stat-n">Ottawa</div><div class="stat-l">& Djibouti</div></div>
+<div class="stat-box"><div class="stat-n">Flexible</div><div class="stat-l">Terms</div></div>
+<div class="stat-box"><div class="stat-n">Fast</div><div class="stat-l">Delivery</div></div>
+      </div>
+    </div>
+    <div class="rv d2">
+      <div class="feat-list">
+        
+    <div class="feat-item rv d1">
+      <div class="feat-ico">🏗️</div>
+      <div><h4>Slab Formwork</h4><p>Table forms, flying forms, and traditional slab formwork systems.</p></div>
+    </div>
+
+    <div class="feat-item rv d2">
+      <div class="feat-ico">🔩</div>
+      <div><h4>Steel Props</h4><p>Adjustable steel props and shoring systems for any span.</p></div>
+    </div>
+
+    <div class="feat-item rv d3">
+      <div class="feat-ico">🦺</div>
+      <div><h4>Scaffolding</h4><p>Frame and modular scaffolding rental for all building heights.</p></div>
+    </div>
+
+    <div class="feat-item rv d1">
+      <div class="feat-ico">🚜</div>
+      <div><h4>Heavy Equipment</h4><p>Backhoes, excavators, and earthmoving equipment for site prep.</p></div>
+    </div>
+
+    <div class="feat-item rv d2">
+      <div class="feat-ico">🧱</div>
+      <div><h4>Material Supply</h4><p>Concrete blocks, rebar, and construction material supply and delivery.</p></div>
+    </div>
+
+    <div class="feat-item rv d3">
+      <div class="feat-ico">📐</div>
+      <div><h4>Technical Support</h4><p>On-site formwork engineering support and installation guidance.</p></div>
+    </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="gallery-sec rv">
+  <div class="gallery-hdr">
+    <div>
+      <div class="tag">Our Work</div>
+      <h2>Formwork Rental<br><span class="ac">Gallery</span></h2>
+    </div>
+    <a href="index.html#contact" class="btn btn-fill">Request Service ›</a>
+  </div>
+  <div class="photo-grid"><div class="ph tall" data-lb="Formwork Rental/Formwork-Table-Form-w.webp" data-cap="Table Form Slab Formwork"><img src="Formwork Rental/Formwork-Table-Form-w.webp" alt="Table Form Slab Formwork" loading="lazy"/><div class="ph-lbl">Table Form Slab Formwork</div></div><div class="ph " data-lb="Material Rent/backhoe-vs-excavator-hero.jpg" data-cap="Excavation Equipment"><img src="Material Rent/backhoe-vs-excavator-hero.jpg" alt="Excavation Equipment" loading="lazy"/><div class="ph-lbl">Excavation Equipment</div></div><div class="ph " data-lb="Material Rent/block 01.jpg" data-cap="Concrete Block Supply"><img src="Material Rent/block 01.jpg" alt="Concrete Block Supply" loading="lazy"/><div class="ph-lbl">Concrete Block Supply</div></div><div class="ph " data-lb="Material Rent/advertissement 2.jpeg" data-cap="Equipment on Site"><img src="Material Rent/advertissement 2.jpeg" alt="Equipment on Site" loading="lazy"/><div class="ph-lbl">Equipment on Site</div></div><div class="ph " data-lb="Material Rent/advertissemnt.jpeg" data-cap="Rental Machinery"><img src="Material Rent/advertissemnt.jpeg" alt="Rental Machinery" loading="lazy"/><div class="ph-lbl">Rental Machinery</div></div><div class="ph " data-lb="Material Rent/advertissmeent 03.jpeg" data-cap="Construction Equipment"><img src="Material Rent/advertissmeent 03.jpeg" alt="Construction Equipment" loading="lazy"/><div class="ph-lbl">Construction Equipment</div></div><div class="ph " data-lb="Project Accomplish/GENERAL.jpg" data-cap="Completed Project"><img src="Project Accomplish/GENERAL.jpg" alt="Completed Project" loading="lazy"/><div class="ph-lbl">Completed Project</div></div><div class="ph " data-lb="Project Accomplish/GENERAL1-scaled.jpg" data-cap="Site Work"><img src="Project Accomplish/GENERAL1-scaled.jpg" alt="Site Work" loading="lazy"/><div class="ph-lbl">Site Work</div></div><div class="ph " data-lb="Project Accomplish/GENERAL2.jpg" data-cap="Construction Achievement"><img src="Project Accomplish/GENERAL2.jpg" alt="Construction Achievement" loading="lazy"/><div class="ph-lbl">Construction Achievement</div></div></div>
+</section>
+
+
+<section class="sec" style="background:var(--bg);">
+  <div class="rv" style="text-align:center;max-width:800px;margin:0 auto;">
+    <div class="tag" style="justify-content:center;">Rental Enquiry</div>
+    <h2>Need Equipment?<br><span class="ac">Get a Rental Quote</span></h2>
+    <p style="color:var(--dm);font-size:.97rem;line-height:1.78;font-weight:300;margin-bottom:2rem;">
+      We stock steel props, slab formwork, table forms, scaffolding, and more. Contact us for availability, pricing, and delivery to your Ottawa or Djibouti site.
+    </p>
+    <a href="index.html#contact" class="btn btn-fill" style="margin:0 auto;">Request Rental Quote ›</a>
+  </div>
+</section>
+
+<!-- CTA -->
+<div class="cta-band">
+  <div class="cta-txt rv">
+    <div class="tag" style="color:#fff;">Ready to Start?</div>
+    <h2 style="color:#fff;">Get a <span style="color:var(--tl)">Free</span> Quote Today</h2>
+    <p class="csub">Licensed, insured and serving Ottawa & Djibouti. Fast response, professional results.</p>
+  </div>
+  <div class="cta-btns rv d2">
+    <a href="index.html#contact" class="btn btn-wh" style="--btn-wh:white">Request a Quote ›</a>
+    <a href="tel:13433360949" class="btn btn-line" style="border-color:rgba(255,255,255,.4);color:#fff;">📞 1 343 336 0949</a>
+  </div>
+</div>
+
+
+<footer>
+  <div class="fgrid">
+    <div class="fbrand">
+      <a href="index.html" class="logo">Pro<span>Core</span></a>
+      <p>Premium construction, renovation & smart-home solutions — serving Ottawa, Canada and Djibouti, Africa since 2005.</p>
+      <div class="soc">
+        <a href="#" class="socl">f</a><a href="#" class="socl">in</a><a href="#" class="socl">ig</a>
+      </div>
+    </div>
+    <div class="fcol">
+      <h5>Services</h5>
+      <ul>
+        <li><a href="epoxy.html">Epoxy Flooring</a></li>
+        <li><a href="hvac.html">HVAC Systems</a></li>
+        <li><a href="electricity.html">Electricity</a></li>
+        <li><a href="plumbing.html">Plumbing</a></li>
+        <li><a href="hydroseeding.html">Hydroseeding</a></li>
+        <li><a href="water-treatment.html">Water Treatment</a></li>
+        <li><a href="smart-locks.html">Smart Locks</a></li>
+        <li><a href="formwork.html">Formwork Rental</a></li>
+      </ul>
+    </div>
+    <div class="fcol">
+      <h5>Company</h5>
+      <ul>
+        <li><a href="index.html#about">About Us</a></li>
+        <li><a href="index.html#why">Why ProCore</a></li>
+        <li><a href="index.html#testimonials">Reviews</a></li>
+        <li><a href="index.html#areas">Service Areas</a></li>
+        <li><a href="index.html#contact">Careers</a></li>
+      </ul>
+    </div>
+    <div class="fcol fhrs">
+      <h5>Contact</h5>
+      <p><strong style="color:var(--tl)">📞 1 343 336 0949</strong><br>bgptekottawa@outlook.com<br><br>🇨🇦 Ottawa, Canada<br>🇩🇯 Djibouti, Africa<br><br>Sat–Thu · 7am–6pm<br>Friday · 8am–3pm<br><span style="color:#22c55e;font-weight:600;">● 24/7 Emergency</span></p>
+    </div>
+  </div>
+  <div class="fbot">
+    <p>© 2026 ProCore Services. All Rights Reserved.</p>
+    <p><a href="#">Privacy Policy</a> · <a href="#">Terms of Service</a></p>
+    <p>Ottawa 🇨🇦 · Djibouti 🇩🇯 · Licensed &amp; Insured</p>
+  </div>
+</footer>
+
+
+<script>
+/* scroll reveal */
+const ro=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');ro.unobserve(e.target);}});},{threshold:.07});
+document.querySelectorAll('.rv').forEach(el=>ro.observe(el));
+/* nav */
+document.getElementById('bur').addEventListener('click',()=>document.getElementById('nl').classList.toggle('open'));
+window.addEventListener('scroll',()=>{
+  document.getElementById('nav').classList.toggle('sm',window.scrollY>80);
+  document.getElementById('btt').classList.toggle('show',window.scrollY>500);
+});
+document.getElementById('btt').addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
+/* lightbox */
+function openLb(src,cap){document.getElementById('lbimg').src=src;document.getElementById('lbcap').textContent=cap||'';document.getElementById('lb').classList.add('open');document.body.style.overflow='hidden';}
+function closeLb(){document.getElementById('lb').classList.remove('open');document.body.style.overflow='';setTimeout(()=>document.getElementById('lbimg').src='',300);}
+document.querySelectorAll('[data-lb]').forEach(el=>{el.style.cursor='pointer';el.addEventListener('click',()=>openLb(el.dataset.lb,el.dataset.cap||''));});
+document.getElementById('lbx').addEventListener('click',closeLb);
+document.getElementById('lb').addEventListener('click',e=>{if(e.target===e.currentTarget)closeLb();});
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeLb();});
+</script>
+
+</body>
+</html>
